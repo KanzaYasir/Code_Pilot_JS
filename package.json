@@ -1,11 +1,8 @@
-
-
-
-
 {
   "name": "code_pilot_js",
   "version": "0.1.0",
   "private": true,
+   "homepage": "https://KanzaYasir.github.io/Code_Pilot_JS",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
