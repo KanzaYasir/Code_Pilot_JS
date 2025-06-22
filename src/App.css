@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f1e;
+  color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(to right, #0f0f1e, #1f1f3a);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar {
+  width: 220px;
+  background-color: #1a1a2e;
+  padding: 1rem;
+  border-right: 1px solid #333;
+  box-shadow: 2px 0 10px rgba(0, 255, 255, 0.2);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar h3 {
+  color: #00ffff;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 0.5rem 0;
+  cursor: pointer;
+  color: #80cbc4;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.sidebar li:hover {
+  background: transparent; /* No hover background */
+  text-shadow: none; /* Remove the neon light effect */
+}
+
+.main {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.editor textarea {
+  width: 100%;
+  height: 200px;
+  background: #0f0f1e;
+  color: #0ff;
+  border: 1px solid #00ffff66;
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 1rem;
+  resize: vertical;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ffff33;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.editor button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #00ffff;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #00ffff99;
+  transition: background 0.2s;
+}
+
+.editor button:hover {
+  background: #66ffff;
+}
+
+.output {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  color: #cfcfcf;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.output h3 {
+  margin-bottom: 0.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 3px #0ff;
+}
+
+.output pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #b2ebf2;
 }
